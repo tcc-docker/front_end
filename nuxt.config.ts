@@ -51,7 +51,8 @@ export default defineNuxtConfig({
 
   // MODULOS
   modules: [
-    ['@nuxtjs/google-fonts']
+    '@nuxtjs/google-fonts',
+    '@nuxt/content'
   ],
 
   // GOOGLE FONTS
@@ -71,6 +72,13 @@ export default defineNuxtConfig({
       Roboto: true,
       Inter: [400, 700]
     }
-  }
+  },
+
+  // CONTENT
+  content: {
+    highlight: {
+      theme: 'light-plus' // Exemplo
+    }
+  },
 
 })
