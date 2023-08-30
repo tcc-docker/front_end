@@ -1,5 +1,10 @@
+<script setup lang="ts">
+useHead({})
+
+const layout = 'responsive'
+</script>
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout :name="layout">
+    <NuxtPage />
+  </NuxtLayout>
 </template>
