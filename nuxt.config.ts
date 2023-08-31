@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // CONFIGURAÇÃO DEVTOOLS
   devtools: { enabled: true },
@@ -49,7 +48,8 @@ export default defineNuxtConfig({
   //   ]
   // },
   components: [
-    { path: '~/components', extensions: ['.vue']}
+    { path: '~/components', extensions: ['.vue'] },
+    { path: '~/components', pathPrefix: false }
   ],
 
   // MODULOS
@@ -79,7 +79,7 @@ export default defineNuxtConfig({
 
   // TAILWINDCSS
   tailwindcss: {
-    cssPath: 'assets/css/tailwind.css', // Dont's inject css file.
+    cssPath: false, //'assets/css/tailwind.css', // Dont's inject css file.
     configPath: 'tailwind.config.ts', // Caminho do arquivo de configuração.
     exposeConfig: true, // Em runtime.
     exposeLevel: 2,
