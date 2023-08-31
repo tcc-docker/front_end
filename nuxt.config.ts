@@ -41,18 +41,21 @@ export default defineNuxtConfig({
   },
 
   // CONFIGURAÇÃO DE COMPONENTES
-  components: {
-    global: true,
-    dirs: [
-      '~/components',
-      { path: '~/components/compositions', pathPrefix: false }
-    ]
-  },
+  // components: {
+  //   global: true,
+  //   dirs: [
+  //     '~/components',
+  //     { path: '~/components', pathPrefix: false }
+  //   ]
+  // },
+  components: [
+    { path: '~/components', extensions: ['.vue']}
+  ],
 
   // MODULOS
   modules: [
     '@nuxtjs/google-fonts',
-    '@nuxt/content'
+    '@nuxtjs/tailwindcss',
   ],
 
   // GOOGLE FONTS
@@ -74,11 +77,14 @@ export default defineNuxtConfig({
     }
   },
 
-  // CONTENT
-  content: {
-    highlight: {
-      theme: 'light-plus' // Exemplo
-    }
-  },
-
+  // TAILWINDCSS
+  tailwindcss: {
+    cssPath: 'assets/css/tailwind.css', // Dont's inject css file.
+    configPath: 'tailwind.config.ts', // Caminho do arquivo de configuração.
+    exposeConfig: true, // Em runtime.
+    exposeLevel: 2,
+    injectPosition: 'first',
+    config: {},
+    viewer: true,
+  }
 })
