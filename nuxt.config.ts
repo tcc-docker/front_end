@@ -56,6 +56,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
   ],
 
   // GOOGLE FONTS
