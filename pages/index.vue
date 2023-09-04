@@ -14,6 +14,11 @@ const { name, age, status, attributes } = storeToRefs(store)
   <div>
     HOME PAGE
     <!-- Access the state directly from the store -->
-    <div>User: {{ store.name }}</div>
+    <div class="name">User: {{ store.name }}</div>
   </div>
 </template>
+<style lang="pcss" scoped>
+.name {
+  /* @apply ; */
+}
+</style>

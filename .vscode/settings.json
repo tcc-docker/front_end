@@ -12,5 +12,8 @@
     "ngClass",
     "ui"
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  }
 }

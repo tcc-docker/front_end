@@ -81,11 +81,20 @@ export default defineNuxtConfig({
   // TAILWINDCSS
   tailwindcss: {
     cssPath: false, //'assets/css/tailwind.css', // Dont's inject css file.
-    configPath: 'tailwind.config.ts', // Caminho do arquivo de configuração.
+    configPath: 'tailwind.config', // Caminho do arquivo de configuração.
     exposeConfig: true, // Em runtime.
     exposeLevel: 2,
     injectPosition: 'first',
     config: {},
     viewer: true,
+  },
+
+  postcss: {
+    // Adicione os plugins do PostCSS aqui
+    plugins: {
+      // Exemplo: Adicione o Autoprefixer
+      autoprefixer: {},
+      // Outros plugins, se necessário
+    },
   }
 })
