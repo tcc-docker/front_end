@@ -81,7 +81,7 @@ export default defineNuxtConfig({
   // TAILWINDCSS
   tailwindcss: {
     cssPath: false, //'assets/css/tailwind.css', // Dont's inject css file.
-    configPath: 'tailwind.config', // Caminho do arquivo de configuração.
+    configPath: 'tailwind.config.ts', // Caminho do arquivo de configuração.
     exposeConfig: true, // Em runtime.
     exposeLevel: 2,
     injectPosition: 'first',

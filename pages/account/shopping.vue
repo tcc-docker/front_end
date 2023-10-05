@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   export default defineComponent({
-    name: 'Responsive',
+    name: 'Shopping',
     data () {
       return {
       }
@@ -15,13 +15,8 @@
 </script>
 <template>
   <div>
-    <Header></Header>
-    <main>
-      <slot></slot>
-    </main>
-    <Footer></Footer>
+    Minhas Compras
   </div>
 </template>
 <style lang="pcss" scoped>
-
 </style>
