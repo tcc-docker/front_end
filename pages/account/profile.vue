@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   export default defineComponent({
-    name: 'Responsive',
+    name: 'Profile',
     data () {
       return {
       }
@@ -15,13 +15,8 @@
 </script>
 <template>
   <div>
-    <Header></Header>
-    <main>
-      <slot></slot>
-    </main>
-    <Footer></Footer>
+    Minhas Informações
   </div>
 </template>
 <style lang="pcss" scoped>
-
 </style>

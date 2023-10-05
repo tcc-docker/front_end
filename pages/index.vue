@@ -1,24 +1,22 @@
-<script setup lang="ts">
-import { storeToRefs } from 'pinia'
-import { useExampleStore } from '@/stores/example'
-
-// access the `store` variable anywhere in the component ✨
-const store = useExampleStore()
-
-// Usando o estado da loja sem chamar ação
-const { name, age, status, attributes } = storeToRefs(store)
-// const { action } = store
+<script lang="ts">
+  export default defineComponent({
+    name: 'HomePage',
+    data () {
+      return {
+      }
+    },
+    computed: {
+      // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
+    },
+    methods: {
+      // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
+    },
+  })
 </script>
-
 <template>
   <div>
-    HOME PAGE
-    <!-- Access the state directly from the store -->
-    <div class="name">User: {{ store.name }}</div>
+    Home Page
   </div>
 </template>
 <style lang="pcss" scoped>
-.name {
-  /* @apply ; */
-}
 </style>
