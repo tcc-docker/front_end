@@ -1,34 +1,35 @@
-<script>
-  export default defineComponent({
-    name: 'Header',
-    data () {
-      return {
-        routers: [
-          {to: '/', title: 'Home Page'},
-          {to: '/certificate', title: 'Certificado Digital'},
-          {to: '/products', title: 'Produtos'},
-          {to: '/partnership', title: 'Parceria'},
-          {to: '/units', title: 'Unidades'},
-          {to: '/support', title: 'Suporte'},
-          {to: '/account', title: 'Minha Conta'},
-          {to: '/cart', title: 'Carrinho'},
-        ]
-      }
-    },
-    computed: {
-      // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
-    },
-    methods: {
-      // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
-    },
-  })
+<script lang="ts">
+export default {
+  name: 'Header',
+  data () {
+    return {
+      routers: [
+        {to: '/', title: 'Home Page'},
+        {to: '/certificate', title: 'Certificado Digital'},
+        {to: '/products', title: 'Produtos'},
+        {to: '/partnership', title: 'Parceria'},
+        {to: '/units', title: 'Unidades'},
+        {to: '/support', title: 'Suporte'},
+        {to: '/account', title: 'Minha Conta'},
+        {to: '/cart', title: 'Carrinho'},
+      ]
+    }
+  },
+  computed: {
+    // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
+  },
+  methods: {
+    // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
+  },
+  setup() {
+    
+  }
+}
 </script>
 <template>
   <header class="header">
     <nav class="navigation">
-      <NuxtLink class="page" v-for="(nav, index) in routers" :to="nav.to">
-        {{ index }} {{ nav.title }}
-      </NuxtLink>
+      <NuxtLink class="page" v-for="(nav, index) in routers" :to="`${$route.params.uuid ? `/${$route.params.uuid}` : ''}${nav.to}`">{{ nav.title }}</NuxtLink>
     </nav>
   </header>
 </template>

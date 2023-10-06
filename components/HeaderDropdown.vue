@@ -1,17 +1,21 @@
-<script>
-  export default defineComponent({
-    name: 'HeaderDropdown',
-    data () {
-      return {
-      }
-    },
-    computed: {
-      // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
-    },
-    methods: {
-      // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
-    },
-  })
+<script lang="ts">
+export default {
+  name: 'HeaderDropdown',
+  data () {
+    return {
+      
+    }
+  },
+  computed: {
+    // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
+  },
+  methods: {
+    // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
+  },
+  setup() {
+    
+  }
+}
 </script>
 <template>
   <header class="header">

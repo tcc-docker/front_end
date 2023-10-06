@@ -1,23 +1,21 @@
-<script>
-  export default defineComponent({
-    name: 'Footer',
-    data () {
-      return {
-        routers: [
-          {to: '/', title: 'Facebook'},
-          {to: '/', title: ' Instagram'},
-          {to: '/', title: 'Linkedin'},
-          {to: '/', title: 'Youtube'},
-        ]
-      }
-    },
-    computed: {
-      // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
-    },
-    methods: {
-      // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
-    },
-  })
+<script lang="ts">
+export default {
+  name: 'Footer',
+  data () {
+    return {
+      
+    }
+  },
+  computed: {
+    // ...mapState(useAuthStore, ['loggedIn', 'showRegister']),
+  },
+  methods: {
+    // ...mapActions(useAuthStore, ['toggleAuthenticationMode']),
+  },
+  setup() {
+    
+  }
+}
 </script>
 <template>
   <footer class="footer">

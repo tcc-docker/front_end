@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: 'Responsive',
+  name: 'Cart',
   data () {
     return {
       
@@ -19,13 +19,8 @@ export default {
 </script>
 <template>
   <div>
-    <Header></Header>
-    <main>
-      <slot></slot>
-    </main>
-    <Footer></Footer>
+    Carrinho
   </div>
 </template>
 <style lang="pcss" scoped>
-
 </style>

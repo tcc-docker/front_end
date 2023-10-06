@@ -1,30 +1,13 @@
 export default defineNuxtConfig({
-  // CONFIGURAÇÃO DEVTOOLS
   devtools: { enabled: true },
 
-  // VARIÁVEIS DE PRODUÇÃO
-  $production: {
-    routeRules: {
-      '/**': { isr: true }
-    }
-  },
-
-  // VARIÁVEIS DE DESENVOLVIMENTO
-  $development: {
-    //
-  },
-
-  // CONFIGURAÇÕES DE TEMPO DE EXECUÇÃO
   runtimeConfig: {
-    // The private keys which are only available server-side
     apiSecret: process.env.NUXT_API_SECRET,
-    // Public keys that are exposed to the client
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api'
     }
   },
 
-  // CONFIGURAÇÕES DE SEO
   app: {
     head: {
       meta: [
@@ -39,38 +22,27 @@ export default defineNuxtConfig({
     }
   },
 
-  // CONFIGURAÇÃO DE COMPONENTES
-  // components: {
-  //   global: true,
-  //   dirs: [
-  //     '~/components',
-  //     { path: '~/components', pathPrefix: false }
-  //   ]
-  // },
   components: [
     { path: '~/components', extensions: ['.vue'] },
     { path: '~/components', pathPrefix: false }
   ],
 
-  // MODULOS
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt'
   ],
 
-  // GOOGLE FONTS
   googleFonts: {
     prefetch: true,
     preconnect: true,
     preload: true,
-    download: true, // Permite baixar css e fonts do Google para o Projeto.
-    overwriting: true, // Impede que os arquivos sejam baixados mais de uma vez.
-    fontsDir: 'fonts', // Diretório que as fontes serão baixadas.
-    fontsPath: 'fonts', // Caminho das fontes.
-    outputDir: 'assets', // Diretório de saída para arquivos baixados.
-    stylePath: 'google-fonts.css', // Caminho da folha de estilo gerada.
-    // Display lets you control what happens while the font is still loading or otherwise unavailable.
+    download: true,
+    overwriting: true,
+    fontsDir: 'fonts',
+    fontsPath: 'fonts',
+    outputDir: 'assets',
+    stylePath: 'google-fonts.css',
     display: 'auto', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
     families: {
       Roboto: true,
@@ -78,11 +50,10 @@ export default defineNuxtConfig({
     }
   },
 
-  // TAILWINDCSS
   tailwindcss: {
-    cssPath: false, //'assets/css/tailwind.css', // Dont's inject css file.
-    configPath: 'tailwind.config.ts', // Caminho do arquivo de configuração.
-    exposeConfig: true, // Em runtime.
+    cssPath: false,
+    configPath: 'tailwind.config.ts',
+    exposeConfig: true,
     exposeLevel: 2,
     injectPosition: 'first',
     config: {},
@@ -90,11 +61,8 @@ export default defineNuxtConfig({
   },
 
   postcss: {
-    // Adicione os plugins do PostCSS aqui
     plugins: {
-      // Exemplo: Adicione o Autoprefixer
       autoprefixer: {},
-      // Outros plugins, se necessário
     },
   }
 })

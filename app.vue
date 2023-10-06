@@ -1,10 +1,16 @@
-<script setup lang="ts">
-useHead({
-  bodyAttrs: { class: 'body' }
-})
-
-const layout = 'responsive'
-
+<script lang="ts">
+export default {
+  data () {
+    return {
+      layout: 'responsive'
+    }
+  },
+  setup() {
+    useHead({
+      bodyAttrs: { class: 'body' }
+    })
+  }
+}
 </script>
 <template>
   <NuxtLayout class="layout" :name="layout">
