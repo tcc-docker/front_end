@@ -1,10 +1,10 @@
 {
   "tailwindCSS.experimental.configFile": "tailwind.config.ts",
   "files.associations": {
-      "*.css": "tailwindcss"
+    "*.css": "tailwindcss"
   },
   "editor.quickSuggestions": {
-      "strings": true
+    "strings": true
   },
   "tailwindCSS.classAttributes": [
     "class",
