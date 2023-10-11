@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const useExampleStore = defineStore('example', {
+export const useRecoverPasswordStore = defineStore('recover-password', {
   state: () => ( {
       // for initially empty lists
       userExample: [] as UserInfo[],
