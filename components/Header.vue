@@ -42,7 +42,6 @@ export default {
   @apply flex items-center ;
   @apply h-24;
   @apply bg-white;
-  @apply sm:px-5;
   @apply border-b border-blue-10;
 }
 .navigation {
