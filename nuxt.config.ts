@@ -33,6 +33,17 @@ export default defineNuxtConfig({
     '@pinia/nuxt'
   ],
 
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+      'mapActions',
+      'mapState',
+      'mapStore',
+      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
+    ],
+  },
+
   googleFonts: {
     prefetch: true,
     preconnect: true,
@@ -45,14 +56,16 @@ export default defineNuxtConfig({
     stylePath: 'google-fonts.css',
     display: 'auto', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
     families: {
-      Roboto: true,
-      Inter: [400, 700]
+      'Roboto Condensed': {
+        wght: [300, 400, 700],
+        ital: [300, 400, 700]
+      }
     }
   },
 
   tailwindcss: {
     cssPath: false,
-    configPath: 'tailwind.config.ts',
+    configPath: 'tailwind.config',
     exposeConfig: true,
     exposeLevel: 2,
     injectPosition: 'first',

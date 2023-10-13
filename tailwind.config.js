@@ -1,6 +1,6 @@
-import type { Config } from 'tailwindcss'
-
-export default <Partial<Config>>{
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js,ts,vue}"],
   theme: {
     extend: {
       colors: {
@@ -58,10 +58,26 @@ export default <Partial<Config>>{
           '90': '#383838',
           '100': '#222222',
         },
-      }
-    }
+      },
+      screens: {
+        // Mobile Até 320px
+        'sm': '320px',
+  
+        // Tablet Até 768px
+        'md': '768px',
+        
+        // Desktop Até 1024px
+        'lg': '1024px',
+        
+        // Desktop Até 1366px
+        'xl': '1366px',
+  
+        // Desktop Até 1920px
+        '2xl': '1920px',
+      },
+    },
   },
   plugins: [],
-  content: ["./src/**/*.{html,js,ts,vue}"],
   safelist: []
 }
+
