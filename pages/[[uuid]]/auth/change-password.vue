@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: 'HeaderDropdown',
+  name: 'ChangePassword',
   data () {
     return {
       
@@ -18,15 +18,12 @@ export default {
 }
 </script>
 <template>
-  <header class="header">
-    Header Dropdown
-  </header>
+  <div class="auth">
+    Alterar Senha
+  </div>
 </template>
 <style lang="pcss" scoped>
-.header {
-  /* @apply h-24 bg-white border-b border-blue-10 flex items-center; */
-}
-.navigation {
-  @apply h-full flex items-center justify-center space-x-10;
+.auth {
+  @apply flex flex-col items-center;
 }
 </style>

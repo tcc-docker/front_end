@@ -5,13 +5,17 @@ export default {
     return {
       routers: [
         {to: '/', title: 'Home Page'},
-        {to: '/certificate', title: 'Certificado Digital'},
-        {to: '/products', title: 'Produtos'},
-        {to: '/partnership', title: 'Parceria'},
-        {to: '/units', title: 'Unidades'},
-        {to: '/support', title: 'Suporte'},
-        {to: '/account', title: 'Minha Conta'},
-        {to: '/cart', title: 'Carrinho'},
+        {to: '/auth/login', title: 'Login'},
+        {to: '/auth/register', title: 'Register'},
+        {to: '/auth/recover-password', title: 'Recover Password'},
+        {to: '/auth/change-password', title: 'Change Password'},
+        // {to: '/certificate', title: 'Certificado Digital'},
+        // {to: '/products', title: 'Produtos'},
+        // {to: '/partnership', title: 'Parceria'},
+        // {to: '/units', title: 'Unidades'},
+        // {to: '/support', title: 'Suporte'},
+        // {to: '/account', title: 'Minha Conta'},
+        // {to: '/cart', title: 'Carrinho'},
       ]
     }
   },
@@ -35,7 +39,11 @@ export default {
 </template>
 <style lang="pcss" scoped>
 .header {
-  @apply h-24 bg-white border-b border-blue-10 flex items-center;
+  @apply flex items-center ;
+  @apply h-24;
+  @apply bg-white;
+  @apply sm:px-5;
+  @apply border-b border-blue-10;
 }
 .navigation {
   @apply h-full flex items-center justify-center space-x-10;

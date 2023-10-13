@@ -25,7 +25,7 @@ export default {
 </template>
 <style lang="pcss" scoped>
 .footer {
-  @apply h-24 divide-y-2 space-y-3 py-5 bg-white border-t border-blue-10 flex flex-col items-center;
+  /* @apply h-24 divide-y-2 space-y-3 py-5 bg-white border-t border-blue-10 flex flex-col items-center; */
 }
 .company {
   @apply flex items-center;
