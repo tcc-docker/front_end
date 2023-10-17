@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <template>
-  <div>
+  <div class="layout">
     <Header></Header>
     <main>
       <slot></slot>
@@ -27,5 +27,9 @@ export default {
   </div>
 </template>
 <style lang="pcss" scoped>
-
+.layout {
+  @apply h-full;
+  @apply space-y-10;
+  @apply flex flex-col justify-between;
+}
 </style>

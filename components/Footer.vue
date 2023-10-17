@@ -19,13 +19,15 @@ export default {
 </script>
 <template>
   <footer class="footer">
-    <div class="company">© XXXX - 2023 Certcode | CNPJ X.XXX.XXX/0001-XX</div>
-    <div class="developer">© 2023 - Desenvolvido por Radiuere</div>
+    footer
+    <!-- <div class="company">© XXXX - 2023 Certcode | CNPJ X.XXX.XXX/0001-XX</div>
+    <div class="developer">© 2023 - Desenvolvido por Radiuere</div> -->
   </footer>
 </template>
 <style lang="pcss" scoped>
 .footer {
-  /* @apply h-24 divide-y-2 space-y-3 py-5 bg-white border-t border-blue-10 flex flex-col items-center; */
+  @apply bg-white border-t border-blue-10 flex flex-col items-center;
+  @apply h-24 w-full;
 }
 .company {
   @apply flex items-center;
