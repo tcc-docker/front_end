@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   runtimeConfig: {
     apiSecret: process.env.NUXT_API_SECRET,
@@ -17,7 +17,8 @@ export default defineNuxtConfig({
       link: [
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com/' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: '' },
-        { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Roboto' }
+        { rel: 'preload', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Roboto+Condensed' },
+        { rel: 'stylesheet', as: 'style', href: 'https://fonts.googleapis.com/css2?family=Roboto+Condensed' },
       ]
     }
   },
@@ -55,6 +56,7 @@ export default defineNuxtConfig({
     outputDir: 'assets',
     stylePath: 'google-fonts.css',
     display: 'auto', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+    inject: true,
     families: {
       'Roboto Condensed': {
         wght: [300, 400, 700],
