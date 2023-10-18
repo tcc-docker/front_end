@@ -29,7 +29,6 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt'
   ],
@@ -43,26 +42,6 @@ export default defineNuxtConfig({
       'mapStore',
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
-  },
-
-  googleFonts: {
-    prefetch: true,
-    preconnect: true,
-    preload: true,
-    download: true,
-    overwriting: true,
-    fontsDir: 'fonts',
-    fontsPath: 'fonts',
-    outputDir: 'assets',
-    stylePath: 'google-fonts.css',
-    display: 'auto', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
-    inject: true,
-    families: {
-      'Roboto Condensed': {
-        wght: [300, 400, 700],
-        ital: [300, 400, 700]
-      }
-    }
   },
 
   tailwindcss: {

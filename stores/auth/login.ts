@@ -13,21 +13,21 @@ export const useLoginStore = defineStore('login', {
   actions: {
     async login(user: User) {
       try {
-        const response = fetch('http://192.168.1.3:5000/user/login', {
-          method: 'POST',
-          body: JSON.stringify({
-            email: user.email,// user.email, // test@certcode.radiure,
-            password: user.password// user.password// 123456
-          }),
-          headers: {
-            'Content-Type': 'application/json',
-            'client-platform': 'browser',
-          }
-        })
-        .then(response => response.json())
-        .then(data => console.log(data.body));
+        // const response = fetch('', {
+        //   method: 'POST',
+        //   body: JSON.stringify({
+        //     email: user.email,// user.email, // test@certcode.radiure,
+        //     password: user.password// user.password// 123456
+        //   }),
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //     'client-platform': 'browser',
+        //   }
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data.body));
         
-        console.log(response);
+        console.log(user);
       } catch (error) {
         alert(error)
       }

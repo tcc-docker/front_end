@@ -1,32 +1,51 @@
 import { defineStore } from 'pinia'
+import { useRouter } from 'vue-router'
 
 export const useRegisterStore = defineStore('register', {
   state: () => ( {
-      // for initially empty lists
-      userExample: [] as UserInfo[],
-      name: 'Amanda',
-      age: 23,
-      status: true,
-      attributes: [ 'longHair', 'customSocks' ]
+      user: {} as User[],
+      token: '' as string
     }
   ),
 
-  // Like computed
   getters: {
-    // Options
   },
 
-  // Like methods
   actions: {
-    // Options
+    async register(user: User) {
+      try {
+        // const response = fetch('', {
+        //   method: 'POST',
+        //   body: JSON.stringify({
+        //     name: user.name,
+        //     birthday: user.birthday,
+        //     email: user.email,
+        //     username: user.username,
+        //     password: user.password
+        //   }),
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //     'client-platform': 'browser',
+        //   }
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data.body));
+        
+        console.log(user);
+        return('ok')
+      } catch (error) {
+        alert(error)
+      }
+    },
   },
 })
 
-interface UserInfo {
+interface User {
   name: string
-  age: number
-  status: boolean
-  attributes: []
+  birthday: string
+  email: string
+  username: string
+  password: string
 }
 
 // persist the whole state to the local storage whenever it changes

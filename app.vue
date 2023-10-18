@@ -13,8 +13,8 @@ export default defineComponent({
 })
 </script>
 <template>
-  <NuxtLayout class="layout" name="responsive">
-    <NuxtPage class="page" />
+  <NuxtLayout class="layout">
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
